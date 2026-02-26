@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
           </a>
         </div>
         <div className="social">
-          <a href="https://www.linkedin.com/in/mucyo-ivan-9a3027322/" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/mucyo-yvan-0633bb3b0" target="_blank" rel="noopener noreferrer">
             <i className="fa-brands fa-linkedin"></i>
           </a>
         </div>
