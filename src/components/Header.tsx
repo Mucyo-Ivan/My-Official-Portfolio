@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 
 interface HeaderProps {
@@ -10,25 +10,25 @@ const Header: React.FC<HeaderProps> = ({ onMenuToggle, menuOpen }) => {
   const [scrolled, setScrolled] = useState(false)
   const [hidden, setHidden] = useState(false)
   const location = useLocation()
+  const prevScrollPos = useRef(0)
 
   const handleScroll = useCallback(() => {
-    const currentScrollPos = window.pageYOffset
+    const currentScrollPos = window.scrollY
 
     setScrolled(currentScrollPos > 0)
 
     if (menuOpen) return
 
-    const prevScrollPos = (window as any).__prevScrollPos || 0
-    if (prevScrollPos > currentScrollPos) {
+    if (prevScrollPos.current > currentScrollPos) {
       setHidden(false)
     } else {
       setHidden(true)
     }
-    ; (window as any).__prevScrollPos = currentScrollPos
+    prevScrollPos.current = currentScrollPos
   }, [menuOpen])
 
   useEffect(() => {
-    ; (window as any).__prevScrollPos = window.pageYOffset
+    prevScrollPos.current = window.scrollY
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [handleScroll])
