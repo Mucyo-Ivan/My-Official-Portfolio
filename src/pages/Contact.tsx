@@ -1,4 +1,5 @@
-import { useState, useRef, FormEvent } from 'react'
+import { useState, useRef } from 'react'
+import type { FormEvent } from 'react'
 
 const Contact: React.FC = () => {
   const [showSuccess, setShowSuccess] = useState(false)
