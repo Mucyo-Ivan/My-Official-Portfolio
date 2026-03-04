@@ -8,7 +8,7 @@ const Home: React.FC = () => {
   useEffect(() => {
     if (typedRef.current) {
       const typed = new Typed(typedRef.current, {
-        strings: ['Graphic Designer', 'Data Analyst', 'Web Developer'],
+        strings: ['UI/UX Designer', 'DevOps Engineer', 'Fullstack Developer'],
         typeSpeed: 55,
       })
 
