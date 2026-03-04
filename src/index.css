@@ -1206,21 +1206,39 @@ header.scrolled {
 	margin: 0;
 }
 
-/* Projects Grid */
-.projects-grid {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	gap: 28px;
+/* Horizontal Auto-Scroll Wrapper */
+.projects-scroll-wrapper {
+	overflow: hidden;
+	position: relative;
+	border-radius: 16px;
 }
 
-@media (max-width: 750px) {
-	.projects-grid {
-		grid-template-columns: 1fr;
+.projects-scroll-track {
+	display: flex;
+	gap: 24px;
+	animation: scrollProjects 20s linear infinite;
+	width: max-content;
+	padding: 8px 0;
+}
+
+.projects-scroll-wrapper:hover .projects-scroll-track {
+	animation-play-state: paused;
+}
+
+@keyframes scrollProjects {
+	0% {
+		transform: translateX(0);
+	}
+
+	100% {
+		transform: translateX(-50%);
 	}
 }
 
 /* Project Card */
 .project-card {
+	min-width: 320px;
+	max-width: 320px;
 	border: 2px solid #ccc;
 	border-radius: 16px;
 	overflow: hidden;
@@ -1228,6 +1246,7 @@ header.scrolled {
 	background: rgba(255, 255, 255, 0.15);
 	backdrop-filter: blur(6px);
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	flex-shrink: 0;
 }
 
 .project-card:hover {
@@ -1297,36 +1316,36 @@ header.scrolled {
 
 /* Card Content */
 .project-card-content {
-	padding: 20px;
+	padding: 18px;
 }
 
 .project-card-content h3 {
-	font-size: 1.15rem;
+	font-size: 1.1rem;
 	font-weight: 600;
 	color: var(--text-color);
 	margin-bottom: 8px;
 }
 
 .project-card-content p {
-	font-size: 0.9rem;
+	font-size: 0.85rem;
 	font-weight: 500;
 	color: var(--text-color);
 	opacity: 0.8;
-	line-height: 1.55;
-	margin-bottom: 14px;
+	line-height: 1.5;
+	margin-bottom: 12px;
 }
 
 /* Tags */
 .project-tags {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 6px;
+	gap: 5px;
 }
 
 .project-tag {
-	padding: 3px 10px;
+	padding: 2px 9px;
 	border-radius: 50px;
-	font-size: 0.75rem;
+	font-size: 0.7rem;
 	font-weight: 600;
 	background: rgba(165, 42, 42, 0.1);
 	color: var(--main-color);
@@ -1345,7 +1364,13 @@ header.scrolled {
 	.category-header h2 {
 		font-size: 1.2rem;
 	}
+
+	.project-card {
+		min-width: 280px;
+		max-width: 280px;
+	}
 }
+
 
 
 .career-main {
