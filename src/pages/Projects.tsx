@@ -45,6 +45,20 @@ const Projects: React.FC = () => {
       tags: ['IoT', 'Embedded Systems', 'C++', 'Web'],
       github: 'https://github.com/Mucyo-Ivan/Weather-App',
     },
+    {
+      title: 'Face Locking System',
+      description: 'A real-time face-locking system where a PC detects and recognizes faces, publishes authentication events via MQTT, and an ESP8266 controls a servo-based lock accordingly.',
+      image: '/Assets/Projects/face-locking.png',
+      tags: ['Python', 'OpenCV', 'MQTT', 'ESP8266', 'Servo Motor', 'Mosquitto'],
+      github: 'https://github.com/Mucyo-Ivan/Face-locking-project-with-motor',
+    },
+    {
+      title: 'Farm Management System',
+      description: 'A Django-based Farm Management System designed to help small-to-medium farms efficiently manage crops, livestock, inventory, workers, and reporting through a scalable, modular architecture.',
+      image: '/Assets/Projects/farm-management.png',
+      tags: ['Python', 'Django', 'Django REST Framework', 'PostgreSQL', 'HTML/CSS', 'JavaScript'],
+      github: 'https://github.com/Mucyo-Ivan/Farm-management-System',
+    },
   ]
 
   const renderCard = (project: typeof webProjects[0], index: number) => (
@@ -110,8 +124,11 @@ const Projects: React.FC = () => {
             </div>
             <h2>Software &amp; IoT</h2>
           </div>
-          <div className="projects-grid">
-            {iotProjects.map((project, index) => renderCard(project, index))}
+          <div className="projects-scroll-wrapper">
+            <div className="projects-scroll-track">
+              {iotProjects.map((project, index) => renderCard(project, index))}
+              {iotProjects.map((project, index) => renderCard(project, index + iotProjects.length))}
+            </div>
           </div>
         </section>
       </div>
