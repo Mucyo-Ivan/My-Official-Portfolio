@@ -4,14 +4,14 @@ const Projects: React.FC = () => {
       title: 'Online Library Management System',
       description: 'A fully functional online library management system with user authentication, book catalog, borrowing system, and admin dashboard.',
       image: '/Assets/Projects/Online-Library-Management-System-_-1024x820.png',
-      tags: ['PHP', 'MySQL', 'HTML/CSS', 'JavaScript'],
+      tags: ['PHP', 'PGSQL', 'HTML/CSS', 'JavaScript'],
       github: 'https://github.com/Mucyo-Ivan/Library-system-in-PHP',
     },
     {
       title: 'Student Result Management System',
       description: 'A comprehensive student result management system with grade tracking, performance analytics, and dashboard visualization.',
       image: '/Assets/Projects/Student-Result-Management-System-_-Dashboard-1024x442.png',
-      tags: ['PHP', 'MySQL', 'Bootstrap', 'JavaScript'],
+      tags: ['PHP', 'PGSQL', 'Bootstrap', 'JavaScript'],
       github: 'https://github.com/Mucyo-Ivan/Student_result_management_system',
     },
   ]
@@ -21,7 +21,7 @@ const Projects: React.FC = () => {
       title: 'SMARTEN',
       description: 'SMARTEN is a real-time smart water management system that tracks usage, detects leaks instantly, and allows users to control and pay for water services remotely through web and mobile platforms.',
       image: '/Assets/Projects/Smarten-web-page.png',
-      tags: ['Arduino', 'Java (Spring Boot)', 'React', 'Flutter', 'InfluxDB', 'TimescaleDB', 'AWS'],
+      tags: ['Arduino', 'Django (Python)', 'React', 'Flutter', 'InfluxDB', 'TimescaleDB', 'AWS'],
       github: 'https://github.com/Mucyo-Ivan/Smarten',
     },
     {
