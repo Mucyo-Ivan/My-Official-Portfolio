@@ -10,12 +10,12 @@ const Testimonials: React.FC = () => {
           <div className="row">
             <div className="block maddat">
               <div className="image">
-                <img src="/Assets/testimonials/person1.jpg" alt="Humura Elvin" />
+                <img src="/Assets/testimonials/Keza Delice.png" alt="Keza Delice" />
               </div>
               <div className="content">
                 <div className="content-row">
                   <div className="name">Name</div>
-                  <div className="description">Humura Elvin</div>
+                  <div className="description">Keza Delice</div>
                   <div className="line"></div>
                 </div>
                 <div className="text">
@@ -27,7 +27,7 @@ const Testimonials: React.FC = () => {
             </div>
             <div className="block oasis">
               <div className="image">
-                <img src="/Assets/testimonials/person2.jpeg" alt="Ganza Rwabuhama Danny Mike" />
+                <img src="/Assets/testimonials/Ganza Danny Mike.png" alt="Ganza Rwabuhama Danny Mike" />
               </div>
               <div className="content">
                 <div className="content-row">
@@ -45,7 +45,7 @@ const Testimonials: React.FC = () => {
           <div className="row">
             <div className="block sudip">
               <div className="image">
-                <img src="/Assets/testimonials/person3.jpg" alt="Ruyange Arnold" />
+                <img src="/Assets/testimonials/Ruyange Arnold.png" alt="Ruyange Arnold" />
               </div>
               <div className="content">
                 <div className="content-row">
@@ -62,7 +62,7 @@ const Testimonials: React.FC = () => {
             </div>
             <div className="block subin">
               <div className="image">
-                <img src="/Assets/testimonials/person4.jpg" alt="Ntwali Isimbi Vieira" />
+                <img src="/Assets/testimonials/Ntwali Isimbi Vieira.jpg" alt="Ntwali Isimbi Vieira" />
               </div>
               <div className="content">
                 <div className="content-row">
