@@ -110,11 +110,8 @@ const Projects: React.FC = () => {
             </div>
             <h2>Software &amp; IoT</h2>
           </div>
-          <div className="projects-scroll-wrapper">
-            <div className="projects-scroll-track">
-              {iotProjects.map((project, index) => renderCard(project, index))}
-              {iotProjects.map((project, index) => renderCard(project, index + iotProjects.length))}
-            </div>
+          <div className="projects-grid">
+            {iotProjects.map((project, index) => renderCard(project, index))}
           </div>
         </section>
       </div>

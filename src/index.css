@@ -1216,7 +1216,7 @@ header.scrolled {
 .projects-scroll-track {
 	display: flex;
 	gap: 24px;
-	animation: scrollProjects 20s linear infinite;
+	animation: scrollProjects 24s linear infinite;
 	width: max-content;
 	padding: 8px 0;
 }
@@ -1231,7 +1231,20 @@ header.scrolled {
 	}
 
 	100% {
-		transform: translateX(-50%);
+		transform: translateX(calc(-50% - 12px));
+	}
+}
+
+/* Static Grid for IoT */
+.projects-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 28px;
+}
+
+@media (max-width: 750px) {
+	.projects-grid {
+		grid-template-columns: 1fr;
 	}
 }
 
