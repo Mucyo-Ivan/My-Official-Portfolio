@@ -1,96 +1,125 @@
 const Projects: React.FC = () => {
+  const webProjects = [
+    {
+      title: 'Online Library Management System',
+      description: 'A fully functional online library management system with user authentication, book catalog, borrowing system, and admin dashboard.',
+      image: '/Assets/Projects/Online-Library-Management-System-_-1024x820.png',
+      tags: ['PHP', 'MySQL', 'HTML/CSS', 'JavaScript'],
+      github: 'https://github.com/Mucyo-Ivan/Library-system-in-PHP',
+    },
+    {
+      title: 'Student Result Management System',
+      description: 'A comprehensive student result management system with grade tracking, performance analytics, and dashboard visualization.',
+      image: '/Assets/Projects/Student-Result-Management-System-_-Dashboard-1024x442.png',
+      tags: ['PHP', 'MySQL', 'Bootstrap', 'JavaScript'],
+      github: 'https://github.com/Mucyo-Ivan/Student_result_management_system',
+    },
+  ]
+
+  const iotProjects = [
+    {
+      title: 'SMARTEN',
+      description: 'SMARTEN is a real-time smart water management system that tracks usage, detects leaks instantly, and allows users to control and pay for water services remotely through web and mobile platforms.',
+      image: '/Assets/Projects/Smarten-web-page.png',
+      tags: ['Arduino', 'Java (Spring Boot)', 'React', 'Flutter', 'InfluxDB', 'TimescaleDB', 'AWS'],
+      github: 'https://github.com/Mucyo-Ivan/Smarten',
+    },
+    {
+      title: 'Smart Home System',
+      description: 'IoT project for remote home automation enabling users to control lights, temperature, and security systems from anywhere.',
+      image: '/Assets/Projects/Smart-Home.png',
+      tags: ['IoT', 'Embedded Systems', 'C++', 'Web'],
+      github: 'https://github.com/Mucyo-Ivan/Weather-App',
+    },
+  ]
+
   return (
-    <main className="gallery-main">
-      <div className="gallery-section">
-        {/* Web Development Projects Section */}
-        <div className="column nepal">
-          <div className="header">
-            <div className="header-line"></div>
-            <div className="text">
-              Web Development Projects<i className="fa-solid fa-laptop-code"></i>
-            </div>
-            <div className="header-line right"></div>
-          </div>
-          <div className="images">
-            <div className="project-item">
-              <img
-                src="/Assets/Projects/Online-Library-Management-System-_-1024x820.png"
-                alt="Web Project 1"
-              />
-              <p>
-                <strong>Online library management system</strong> - A fully functional Online library
-                management system.
-              </p>
-              <a
-                href="https://github.com/Mucyo-Ivan/Library-system-in-PHP"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-link"
-              >
-                GitHub Repository
-              </a>
-            </div>
-            <div className="project-item">
-              <img
-                src="/Assets/Projects/Student-Result-Management-System-_-Dashboard-1024x442.png"
-                alt="Web Project 2"
-              />
-              <p>
-                <strong>Student Result Management System</strong> - A fully functional Student Result
-                Management system.
-              </p>
-              <a
-                href="https://github.com/Mucyo-Ivan/Student_result_management_system"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-link"
-              >
-                GitHub Repository
-              </a>
-            </div>
-          </div>
+    <main className="projects-main">
+      <div className="projects-container">
+        {/* Page Header */}
+        <div className="projects-page-header">
+          <h1 className="projects-title">My Projects</h1>
+          <p className="projects-subtitle">
+            A showcase of my work spanning web development, IoT, and software engineering
+          </p>
+          <div className="projects-title-line"></div>
         </div>
 
-        <div className="column australia">
-          <div className="header">
-            <div className="header-line"></div>
-            <div className="text">
-              Software &amp; IoT Projects <i className="fa-solid fa-microchip"></i>
+        {/* Web Development Section */}
+        <section className="projects-category">
+          <div className="category-header">
+            <div className="category-icon-wrapper">
+              <i className="fa-solid fa-laptop-code"></i>
             </div>
-            <div className="header-line right"></div>
+            <h2>Web Development</h2>
           </div>
-          <div className="images">
-            <div className="project-item">
-              <img src="/Assets/Projects/pipe leakage.jpeg" alt="Software Project 1" />
-              <p>
-                <strong>Pipe water leakage detection system</strong> - IOT project for pipe water leakage
-                detection.
-              </p>
-              <a
-                href="https://github.com/Mucyo-Ivan/Smarten"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-link"
-              >
-                GitHub Repository
-              </a>
-            </div>
-            <div className="project-item">
-              <img src="/Assets/Projects/Smart-Home.png" alt="Software Project 2" />
-              <p>
-                <strong>Smart Home System</strong> - IoT project for remote home automation.
-              </p>
-              <a
-                href="https://github.com/Mucyo-Ivan/Weather-App"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-link"
-              >
-                GitHub Repository
-              </a>
-            </div>
+          <div className="projects-grid">
+            {webProjects.map((project, index) => (
+              <div className="project-card" key={index}>
+                <div className="project-card-image">
+                  <img src={project.image} alt={project.title} />
+                  <div className="project-card-overlay">
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-overlay-btn"
+                    >
+                      <i className="fa-brands fa-github"></i> View on GitHub
+                    </a>
+                  </div>
+                </div>
+                <div className="project-card-content">
+                  <h3>{project.title}</h3>
+                  <p>{project.description}</p>
+                  <div className="project-tags">
+                    {project.tags.map((tag, i) => (
+                      <span className="project-tag" key={i}>{tag}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
-        </div>
+        </section>
+
+        {/* Software & IoT Section */}
+        <section className="projects-category">
+          <div className="category-header">
+            <div className="category-icon-wrapper">
+              <i className="fa-solid fa-microchip"></i>
+            </div>
+            <h2>Software &amp; IoT</h2>
+          </div>
+          <div className="projects-grid">
+            {iotProjects.map((project, index) => (
+              <div className="project-card" key={index}>
+                <div className="project-card-image">
+                  <img src={project.image} alt={project.title} />
+                  <div className="project-card-overlay">
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-overlay-btn"
+                    >
+                      <i className="fa-brands fa-github"></i> View on GitHub
+                    </a>
+                  </div>
+                </div>
+                <div className="project-card-content">
+                  <h3>{project.title}</h3>
+                  <p>{project.description}</p>
+                  <div className="project-tags">
+                    {project.tags.map((tag, i) => (
+                      <span className="project-tag" key={i}>{tag}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
       </div>
     </main>
   )
