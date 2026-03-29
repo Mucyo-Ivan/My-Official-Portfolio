@@ -20,6 +20,11 @@ const Footer: React.FC = () => {
             <i className="fa-brands fa-github"></i>
           </a>
         </div>
+        <div className="social">
+          <a href="https://x.com/_Mucyo_" target="_blank" rel="noopener noreferrer">
+            <i className="fa-brands fa-x-twitter"></i>
+          </a>
+        </div>
       </div>
     </footer>
   )
