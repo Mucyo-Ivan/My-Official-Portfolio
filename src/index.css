@@ -1645,6 +1645,8 @@ header.scrolled {
 
 .hobbies-main .hobbies-section .section .hobbies .image img {
 	width: 100%;
+	height: 180px;
+	object-fit: cover;
 	display: block;
 	border-radius: 10px;
 }
