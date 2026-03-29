@@ -3,7 +3,7 @@
 ## 👨‍💻 Author
 
 **MUCYO Ivan**
-*Fullstack Developer | Software Engineer | UI/UX Enthusiast*
+*Fullstack Developer | Software Engineer | UI/UX designer*
 
 - **GitHub:** [@Mucyo-Ivan](https://github.com/Mucyo-Ivan)
 - **LinkedIn:** [MUCYO Ivan](https://www.linkedin.com/in/mucyo-yvan-0633bb3b0)
