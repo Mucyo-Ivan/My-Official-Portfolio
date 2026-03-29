@@ -10,7 +10,7 @@ const Hobbies: React.FC = () => {
           <div className="row first">
             <div className="hobbies">
               <div className="image">
-                <img src="/Assets/hobbies/travelling.jpeg" alt="Travelling" />
+                <img src="/Assets/hobbies/Travelling.jpg" alt="Travelling" />
               </div>
               <div className="header">
                 <div className="header-text">Travelling</div>
@@ -24,7 +24,7 @@ const Hobbies: React.FC = () => {
             </div>
             <div className="hobbies">
               <div className="image">
-                <img src="/Assets/hobbies/swimming.jpg" alt="Swimming" />
+                <img src="/Assets/hobbies/Swimming.jpg" alt="Swimming" />
               </div>
               <div className="header">
                 <div className="header-text">Swimming</div>
@@ -40,7 +40,7 @@ const Hobbies: React.FC = () => {
           <div className="row second">
             <div className="hobbies">
               <div className="image">
-                <img src="/Assets/hobbies/social adventures.jpg" alt="Social Hangouts" />
+                <img src="/Assets/hobbies/Social-Hangouts.jpg" alt="Social Hangouts" />
               </div>
               <div className="header">
                 <div className="header-text">Social Hangouts</div>
@@ -54,7 +54,7 @@ const Hobbies: React.FC = () => {
             </div>
             <div className="hobbies">
               <div className="image">
-                <img src="/Assets/hobbies/photography.jpeg" alt="Photography" />
+                <img src="/Assets/hobbies/Camera.webp" alt="Photography" />
               </div>
               <div className="header">
                 <div className="header-text">Photography</div>
