@@ -47,7 +47,7 @@ const Home: React.FC = () => {
             ideas into visually stunning and functional realities.
           </p>
           <div className="buttons">
-            <a href="#">Download CV</a>
+            <a href="/MUCYO Ivan off Resume.pdf" download="MUCYO_Ivan_Resume.pdf">Download Resume</a>
             <Link to="/contact" className="cm-button">Contact Me</Link>
           </div>
         </div>
