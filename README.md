@@ -1,7 +1,5 @@
 # Ivan's Portfolio
 
-![Portfolio Banner](./public/Assets/Projects/Smarten-web-page.png) *A modern, responsive, and dynamic personal portfolio built with React and TypeScript.*
-
 ## 👨‍💻 Author
 
 **MUCYO Ivan**
