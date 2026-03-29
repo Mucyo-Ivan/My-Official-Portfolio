@@ -18,6 +18,19 @@ const Home: React.FC = () => {
     }
   }, [])
 
+  const calculateAge = () => {
+    const birthDate = new Date(2008, 3, 2) // April 2, 2008 (Month is 0-indexed)
+    const today = new Date()
+    let currentAge = today.getFullYear() - birthDate.getFullYear()
+    const m = today.getMonth() - birthDate.getMonth()
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+      currentAge--
+    }
+    return currentAge
+  }
+
+  const age = calculateAge()
+
   return (
     <section className="about" id="about">
       <div className="about-content">
@@ -29,7 +42,7 @@ const Home: React.FC = () => {
             I'm Ivan and I'm a <span ref={typedRef} className="iAm"></span>
           </div>
           <p>
-            A 16-year-old Web Developer with a deep passion for crafting elegant and user-friendly websites.
+            A {age}-year-old Web Developer with a deep passion for crafting elegant and user-friendly websites.
             With a creative mindset and strong technical skills, I specialize in turning web
             ideas into visually stunning and functional realities.
           </p>
