@@ -2,7 +2,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="footer">
       <div className="left">
-        &copy; 2025 • MUCYO Ivan • All Rights Reserved
+        &copy; {new Date().getFullYear()} • MUCYO Ivan • All Rights Reserved
       </div>
       <div className="right">
         <div className="social">
